@@ -9,11 +9,11 @@ class WelcomeController extends Controller
 {
   public function index()
   {
-  $workouts = Workout::all();
+      $workouts = Workout::all();
 
-  return view('welcome', [
-          'title' => 'Posted Workouts',
-  		    'workouts' => $workouts
-       ]);
+      return view('welcome', [
+        'title' => 'Posted Workouts',
+        'workouts' => $workouts
+      ]);
   }
 }

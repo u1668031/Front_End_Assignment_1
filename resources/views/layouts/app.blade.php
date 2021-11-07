@@ -3,34 +3,38 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Post a Workout - @yield('title')</title>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    <body>
+        <section class="pageHeader">
+		<div class="container mx-auto">
+            <h1>Post your Workout!</h1>
+		</div>
+        </section>
 
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
+        <section class="navigation">
+		<div class="container mx-auto">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/workouts">Workouts</a></li>
+                <li><a href="/workouts/create">Add a Workout</a></li>
+            </ul>
+		</div>
+        </section>
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
+        <section class="pageTitle">
+		<div class="container mx-auto">
+            <h2>@yield('title')</h2>
+		</div>
+        </section>
+
+        <section class="content">
+		<div class="container mx-auto">
+            @yield('content')
+		</div>
+        </section>
     </body>
 </html>
