@@ -17,11 +17,24 @@
 
         <section class="navigation">
 		<div class="container mx-auto">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/workouts">Workouts</a></li>
-                <li><a href="/workouts/create">Add a Workout</a></li>
-            </ul>
+      <ul class="navbar">
+          @if (Auth::guest())
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Register</a></li>
+          @else
+              <li><a href="/">Home</a></li>
+              <li><a href="/workouts">workouts</a></li>
+              <li><a href="/workouts/create">Post your workout</a></li>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+                <!-- MichalOravec https://laracasts.com/discuss/channels/laravel/breeze-auth-logout-link -->
+
+          @endif
+
+      </ul>
 		</div>
         </section>
 

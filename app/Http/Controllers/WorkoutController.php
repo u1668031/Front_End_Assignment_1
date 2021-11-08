@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Workout;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class WorkoutController extends Controller
 {
@@ -40,17 +41,18 @@ class WorkoutController extends Controller
      */
      public function store(Request $request)
      {
-     $request->validate([
-     'name' => 'required',
-     'workout' => 'required'
-     ]);
+         $request->validate([
+             'workout' => 'required'
+         ]);
 
-     Workout::create($request->all());
+         $workout = new Workout;
+         $workout->user()->associate(Auth::user());
+         $workout->workout = $request->workout;
+         $workout->save();
 
-     return redirect()->route('workouts.index')
-     ->with('success', 'Workout saved successfully.');
+         return redirect()->route('workouts.index')
+             ->with('success','Workout posted successfully.');
      }
-
 
     /**
      * Display the specified resource.
@@ -87,15 +89,15 @@ class WorkoutController extends Controller
      */
      public function update(Request $request, Workout $workout)
      {
-             $request->validate([
-                 'name' => 'required',
-                 'workout' => 'required'
-             ]);
+         $request->validate([
+             'workout' => 'required'
+         ]);
 
-             $workout->update($request->all());
+         $workout->workout = $request->workout;
+         $workout->save();
 
-             return redirect()->route('workouts.index')
-                 ->with('success', 'Workout updated successfully');
+         return redirect()->route('workouts.index')
+             ->with('success', 'Workout updated successfully');
      }
 
     /**
@@ -111,5 +113,4 @@ class WorkoutController extends Controller
              return redirect()->route('workouts.index')
                  ->with('success', 'Workout deleted successfully');
      }
-
 }

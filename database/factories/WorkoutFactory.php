@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\Workout;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Workout;
+use App\Models\User;
 
 class WorkoutFactory extends Factory
 {
@@ -12,7 +13,7 @@ class WorkoutFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
+            'user_id' => User::factory(1)->create()->first(),
             'workout' => $this->faker->realText(500)
         ];
     }
