@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Posted workouts')
+@section('title', 'Posted Workouts')
 
 @section('content')
     @if ($message = Session::get('success'))

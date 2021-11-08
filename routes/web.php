@@ -22,3 +22,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/workouts/create', function () {
+    return view('create');
+})->middleware(['auth'])->name('create');
+
+require __DIR__.'/auth.php';

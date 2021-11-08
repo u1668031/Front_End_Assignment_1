@@ -11,7 +11,7 @@
     <body>
         <section class="pageHeader">
 		<div class="container mx-auto">
-            <h1>Post your Workout!</h1>
+            <h1>Post a Workout!</h1>
 		</div>
         </section>
 
@@ -21,19 +21,18 @@
           @if (Auth::guest())
               <li><a href="/login">Login</a></li>
               <li><a href="/register">Register</a></li>
+              <li><a href="/workouts">Workouts</a></li>
           @else
               <li><a href="/">Home</a></li>
-              <li><a href="/workouts">workouts</a></li>
-              <li><a href="/workouts/create">Post your workout</a></li>
+              <li><a href="/workouts">Workouts</a></li>
+              <li><a href="/workouts/create">Post a workout</a></li>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
                 <!-- MichalOravec https://laracasts.com/discuss/channels/laravel/breeze-auth-logout-link -->
-
           @endif
-
       </ul>
 		</div>
         </section>
