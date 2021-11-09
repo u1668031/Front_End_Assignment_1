@@ -7,6 +7,13 @@ use App\Models\Workout;
 
 class WorkoutSeeder extends Seeder
 {
+
+  /**
+   * Run the workout seeds.
+   *
+   * @return void
+   */
+
     public function run()
     {
         workout::factory()

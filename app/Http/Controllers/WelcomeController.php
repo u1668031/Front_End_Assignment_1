@@ -7,6 +7,13 @@ use App\Models\Workout;
 
 class WelcomeController extends Controller
 {
+
+  /**
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+
   public function index()
   {
       $workouts = Workout::all();

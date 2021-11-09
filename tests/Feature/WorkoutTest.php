@@ -10,11 +10,11 @@ use App\Models\User;
 
 class WorkoutTest extends TestCase
 {
+
     /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
+      * Tests the show function for CRUD.
+      */
+
      public function test_show_workouts()
      {
         $response = $this->get('/workouts');
@@ -30,6 +30,10 @@ class WorkoutTest extends TestCase
           ], $expectedPage1NameData->toArray()));
       }
 
+      /**
+       * Tests the create function for CRUD.
+       */
+
      public function test_create_workouts()
      {
         $newWorkout = 'Some test comments';
@@ -41,11 +45,15 @@ class WorkoutTest extends TestCase
             'workout' => $newWorkout
           ]);
 
-        $newWorkoutt = $workout->fresh();
+        $newWorkoutTest = $workout->fresh();
 
         $response->assertOk();
-        $this->assertEquals($newWorkout, $newWorkoutt->workout);
+        $this->assertEquals($newWorkout, $newWorkoutTest->workout);
       }
+
+      /**
+       * Tests the edit function for CRUD.
+       */
 
       public function test_edit_workouts()
       {
@@ -61,11 +69,15 @@ class WorkoutTest extends TestCase
             'workout' => $newWorkout
           ]);
 
-        $newWorkoutt = $workout->fresh();
+        $newWorkoutTest = $workout->fresh();
 
         $response->assertOk();
-        $this->assertEquals($newWorkout, $newWorkoutt->workout);
+        $this->assertEquals($newWorkout, $newWorkoutTest->workout);
       }
+
+      /**
+        * Tests the delete function for CRUD.
+        */
 
       public function test_delete_workouts()
       {

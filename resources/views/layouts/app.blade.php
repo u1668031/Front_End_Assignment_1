@@ -31,7 +31,7 @@
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
-                <!-- MichalOravec https://laracasts.com/discuss/channels/laravel/breeze-auth-logout-link -->
+                <!-- MichalOravec (2020). https://laracasts.com/discuss/channels/laravel/breeze-auth-logout-link -->
           @endif
       </ul>
 		</div>

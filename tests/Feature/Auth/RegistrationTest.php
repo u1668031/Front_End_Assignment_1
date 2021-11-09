@@ -10,12 +10,20 @@ class RegistrationTest extends TestCase
 {
     use RefreshDatabase;
 
+    /**
+      * Tests the register screen can be loaded.
+      */
+
     public function test_registration_screen_can_be_rendered()
     {
         $response = $this->get('/register');
 
         $response->assertStatus(200);
     }
+
+    /**
+      * Tests a user can register.
+      */
 
     public function test_new_users_can_register()
     {

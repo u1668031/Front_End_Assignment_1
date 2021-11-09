@@ -12,12 +12,20 @@ class PasswordResetTest extends TestCase
 {
     use RefreshDatabase;
 
+    /**
+      * Tests the reset password link can be loaded.
+      */
+
     public function test_reset_password_link_screen_can_be_rendered()
     {
         $response = $this->get('/forgot-password');
 
         $response->assertStatus(200);
     }
+
+    /**
+      * Tests the reset password link.
+      */
 
     public function test_reset_password_link_can_be_requested()
     {
@@ -29,6 +37,11 @@ class PasswordResetTest extends TestCase
 
         Notification::assertSentTo($user, ResetPassword::class);
     }
+
+
+    /**
+      * Tests the reset password screen can be loaded.
+      */
 
     public function test_reset_password_screen_can_be_rendered()
     {

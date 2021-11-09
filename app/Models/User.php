@@ -42,7 +42,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    
+
+    /**
+     * the attribute that should be retrieved.
+     */
+
     public function workouts()
     {
     return $this->hasMany(Workout::class);

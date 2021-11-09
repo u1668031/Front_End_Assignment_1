@@ -10,6 +10,10 @@ class PasswordConfirmationTest extends TestCase
 {
     use RefreshDatabase;
 
+    /**
+      * Tests the confirm password screen can be loaded.
+      */
+
     public function test_confirm_password_screen_can_be_rendered()
     {
         $user = User::factory()->create();
@@ -18,6 +22,10 @@ class PasswordConfirmationTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    /**
+      * Tests the password screen can be confirmed.
+      */
 
     public function test_password_can_be_confirmed()
     {
@@ -30,6 +38,10 @@ class PasswordConfirmationTest extends TestCase
         $response->assertRedirect();
         $response->assertSessionHasNoErrors();
     }
+
+    /**
+      * Tests the password is not confirmed.
+      */
 
     public function test_password_is_not_confirmed_with_invalid_password()
     {

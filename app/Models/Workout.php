@@ -10,9 +10,19 @@ class Workout extends Model
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var string[]
+     */
+
     protected $fillable = [
         'workout'
     ];
+
+    /**
+     * the attribute that should be retrieved.
+     */
 
     public function user()
     {

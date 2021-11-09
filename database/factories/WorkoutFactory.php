@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Workout;
 use App\Models\User;
 
+
+/**
+  * This factory creates and inputs user and workout dummy data into the DB.
+  */
+
 class WorkoutFactory extends Factory
 {
     protected $model = Workout::class;
