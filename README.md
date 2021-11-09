@@ -66,7 +66,7 @@ This will retrieve the installation file from the URL, verify the installer, the
 
 You will need to install the composer dependancies into the application's directory. In Git Bash from the application's directory run (example):
 
-1.../../composer.phar install
+1. ../../composer.phar install
 
 ![image](https://user-images.githubusercontent.com/93779993/141010202-ba097f52-3177-4a2f-8ed1-d27fecaca057.png)
 ![image](https://user-images.githubusercontent.com/93779993/141010257-af65c327-c747-4c7f-9db6-aa029203fe3d.png)
