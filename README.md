@@ -128,12 +128,12 @@ Follow these steps to use the application for it's intended purpose(please note 
 
 ![image](https://user-images.githubusercontent.com/93779993/141012814-0944b494-d61e-4b4f-92f7-bf42c15dd011.png)
 
-  2.. If you click on the 'Workouts' link, this will redirect you to a new page that lists all the workouts that have been posted. You can view a workout by clicking on the name of the user that has posted the workout.
+  2. If you click on the 'Workouts' link, this will redirect you to a new page that lists all the workouts that have been posted. You can view a workout by clicking on the name of the user that has posted the workout.
 
 ![image](https://user-images.githubusercontent.com/93779993/141012865-d4b028c4-7cfd-43ec-a4df-c724256b0f5c.png)
 ![image](https://user-images.githubusercontent.com/93779993/141013062-4aba1a75-0c39-4773-86a5-1f8072eb2c1f.png)
 
-  3.. Click on the 'Post a Workout' link and you will be redirected to a form page. Here you can enter the details of a workout and post it into the database to be stored.
+  3. Click on the 'Post a Workout' link and you will be redirected to a form page. Here you can enter the details of a workout and post it into the database to be stored.
  
  ![image](https://user-images.githubusercontent.com/93779993/141013466-cd5f8b42-8e89-4856-a77f-9e4902fe48c7.png)
  
