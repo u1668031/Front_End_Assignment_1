@@ -128,16 +128,16 @@ Follow these steps to use the application for it's intended purpose(please note 
 
 ![image](https://user-images.githubusercontent.com/93779993/141012814-0944b494-d61e-4b4f-92f7-bf42c15dd011.png)
 
-  3. If you click on the 'Workouts' link, this will redirect you to a new page that lists all the workouts that have been posted. You can view a workout by clicking on the name of the user that has posted the workout.
+  2.. If you click on the 'Workouts' link, this will redirect you to a new page that lists all the workouts that have been posted. You can view a workout by clicking on the name of the user that has posted the workout.
 
 ![image](https://user-images.githubusercontent.com/93779993/141012865-d4b028c4-7cfd-43ec-a4df-c724256b0f5c.png)
 ![image](https://user-images.githubusercontent.com/93779993/141013062-4aba1a75-0c39-4773-86a5-1f8072eb2c1f.png)
 
-  5. Click on the 'Post a Workout' link and you will be redirected to a form page. Here you can enter the details of a workout and post it into the database to be stored.
+  3.. Click on the 'Post a Workout' link and you will be redirected to a form page. Here you can enter the details of a workout and post it into the database to be stored.
  
  ![image](https://user-images.githubusercontent.com/93779993/141013466-cd5f8b42-8e89-4856-a77f-9e4902fe48c7.png)
  
-  7. If you go to 'Workouts' again, you will see that your posted workout is shown. You will now be able to show, edit or delete your workout. By clicking 'Show', you are simply pulling the workout from the database and expanding the view. If you want to edit the workout you can, by clicking on 'Edit'. This redirects you to a new page that allows you to edit the workout and update the new content back into the database. You will be redirected to the 'Workouts' page and prompted that the workout has been updated successfully. If you wish to delete the workout from the database, click 'Delete' and this will the remove it from the database. You will be prompted if this is successful.
+  4. If you go to 'Workouts' again, you will see that your posted workout is shown. You will now be able to show, edit or delete your workout. By clicking 'Show', you are simply pulling the workout from the database and expanding the view. If you want to edit the workout you can, by clicking on 'Edit'. This redirects you to a new page that allows you to edit the workout and update the new content back into the database. You will be redirected to the 'Workouts' page and prompted that the workout has been updated successfully. If you wish to delete the workout from the database, click 'Delete' and this will the remove it from the database. You will be prompted if this is successful.
  
  ![image](https://user-images.githubusercontent.com/93779993/141013552-ba61fcf8-6939-4f64-b240-0c9d6789a48e.png)
  ![image](https://user-images.githubusercontent.com/93779993/141013611-276adad2-7726-42ce-9806-50207cf0eb33.png)
@@ -145,7 +145,7 @@ Follow these steps to use the application for it's intended purpose(please note 
  ![image](https://user-images.githubusercontent.com/93779993/141013717-8d1d09f1-7a0e-48cd-b1ed-831ab55de71f.png)
  ![image](https://user-images.githubusercontent.com/93779993/141013748-0dd846c3-ccef-4e67-946e-28b1321e235e.png)
  
-  9. You can click the 'Logout' link to log you out as a user and redirect to the hompage.
+  5. You can click the 'Logout' link to log you out as a user and redirect to the hompage.
 
 ## Testing the Application
 A test framework has been built to test the application for bugs. To run the tests, open up your Git Bash in the application's directory and enter the following command:
